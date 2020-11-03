@@ -126,4 +126,4 @@ dmypy.json
 
 # Uploads
 uploads/*
-!.gitignore
+!uploads
