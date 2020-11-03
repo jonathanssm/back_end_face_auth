@@ -11,10 +11,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
 
-@app.route('/', methods=['GET', 'POST'])
-def test():
-   return jsonify('Bem vindo.')
-
 @app.route('/cadastro/cadastrar-usuario', methods=['GET', 'POST'])
 def cadastrarUsuario():
    if request.method == 'POST':
