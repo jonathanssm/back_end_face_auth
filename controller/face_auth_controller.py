@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 
-UPLOAD_FOLDER = '../uploads'
+UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
