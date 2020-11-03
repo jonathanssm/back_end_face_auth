@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 
@@ -10,6 +10,10 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
+
+@app.route('/', methods=['GET', 'POST'])
+def cadastrarUsuario():
+   return jsonify('Bem vindo.')
 
 @app.route('/cadastro/cadastrar-usuario', methods=['GET', 'POST'])
 def cadastrarUsuario():
