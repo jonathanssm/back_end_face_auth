@@ -1,0 +1,3 @@
+# Ignore archives in 'uploads' and maintain the folder
+*
+!.gitignore
