@@ -14,9 +14,12 @@ CORS(app)
 @app.route('/cadastro/cadastrar-usuario', methods=['GET', 'POST'])
 def cadastrarUsuario():
    if request.method == 'POST':
-      f = request.files['arquivo']
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-      return 'Cadastro realizado com sucesso.'
+      try:
+         f = request.files['arquivo']
+         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
+         return 'Cadastro realizado com sucesso.'
+      except:
+         return 'Ocorreu um erro durante o cadastro.'
 
 if __name__ == "__main__":
     app.run(debug=True)
