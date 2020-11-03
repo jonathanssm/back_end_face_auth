@@ -125,3 +125,5 @@ dmypy.json
 .pyre/
 
 # Ignore archives in 'uploads' and maintain the folder
+uploads/
+!uploads
