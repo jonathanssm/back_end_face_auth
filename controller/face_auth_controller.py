@@ -1,7 +1,7 @@
 import os
+import cv2
 
-from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, request
 from flask_cors import CORS
 
 UPLOAD_FOLDER = './uploads'
@@ -11,15 +11,15 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
 
-@app.route('/cadastro/cadastrar-usuario', methods=['GET', 'POST'])
-def cadastrarUsuario():
-   if request.method == 'POST':
-      try:
-         f = request.files['arquivo']
-         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-         return 'Cadastro realizado com sucesso.'
-      except:
-         return 'Ocorreu um erro durante o cadastro.'
+CAMINHO_CASCADE = './util/haarcascade_frontalface_default.xml'
+classificador = cv2.CascadeClassifier(CAMINHO_CASCADE)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+@app.route('/cadastro/cadastrar-usuario', methods=['POST'])
+def cadastrarUsuario():
+    try:
+        f = request.files['arquivo']
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
+        return "true"
+    except ValueError:
+        return "false"
