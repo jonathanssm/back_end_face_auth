@@ -21,8 +21,8 @@ Flask-WTF==0.14.2
 Flask-User==1.0.1.5
 pytest==3.0.5
 pytest-cov==2.4.0
-opencv-contrib-python = "*"
-flask-cors = "*"
+opencv-contrib-python==4.4.0.46
+flask-cors==3.0.9
 
 [requires]
 
