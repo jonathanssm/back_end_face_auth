@@ -1,25 +1,27 @@
 import os
+import numpy as np
+import cv2
 
-from flask import Flask, render_template, request, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, request
 from flask_cors import CORS
 
-UPLOAD_FOLDER = './uploads'
+UPLOAD_FOLDER = '../uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
 
-@app.route('/cadastro/cadastrar-usuario', methods=['GET', 'POST'])
+
+@app.route('/cadastro/cadastrar-usuario', methods=['POST'])
 def cadastrarUsuario():
-   if request.method == 'POST':
-      try:
-         f = request.files['arquivo']
-         f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
-         return 'Cadastro realizado com sucesso.'
-      except:
-         return 'Ocorreu um erro durante o cadastro.'
+    try:
+        f = request.files['arquivo']
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
+        return "true"
+    except ValueError:
+        return "false"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
