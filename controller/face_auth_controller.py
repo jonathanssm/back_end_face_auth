@@ -2,10 +2,12 @@ import os
 #import cv2
 
 from flask import Flask, request
+from flask_cors import CORS
 
 UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
+CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 #camera = cv2.Video
