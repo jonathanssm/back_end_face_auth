@@ -5,14 +5,14 @@ import cv2
 from flask import Flask, request
 from flask_cors import CORS
 
-UPLOAD_FOLDER = '../uploads'
+UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
 
-CAMINHO_CASCADE = '../util/haarcascade_frontalface_default.xml'
+CAMINHO_CASCADE = './util/haarcascade_frontalface_default.xml'
 classificador = cv2.CascadeClassifier(CAMINHO_CASCADE)
 
 
