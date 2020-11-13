@@ -2,9 +2,14 @@ import cv2
 import os
 import numpy as np
 
-eigenface = cv2.face.EigenFaceRecognizer_create()
-fisherface = cv2.face.FisherFaceRecognizer_create()
-lbph = cv2.face.LBPHFaceRecognizer_create()
+#threshold pode ser ajustado para melhorar a qualidade do reconhecimento
+#eigenface = cv2.face.EigenFaceRecognizer_create(num_components=50)
+#fisherface = cv2.face.FisherFaceRecognizer_create()
+#lbph = cv2.face.LBPHFaceRecognizer_create()
+
+eigenface = cv2.face.EigenFaceRecognizer_create(40, 8000)
+fisherface = cv2.face.FisherFaceRecognizer_create(3, 2000)
+lbph = cv2.face.LBPHFaceRecognizer_create(2, 2, 7, 7, 50)
 
 
 def getFotoComId():
@@ -13,11 +18,12 @@ def getFotoComId():
     ids = []
 
     for caminhoFoto in caminhos:
-        id = int(os.path.split(caminhoFoto)[-1].split('.')[1])
-        face = cv2.cvtColor(cv2.imread(caminhoFoto), cv2.COLOR_BGR2GRAY)
+        if caminhoFoto != 'fotos\.gitignore':
+            id = int(os.path.split(caminhoFoto)[-1].split('.')[1])
+            face = cv2.cvtColor(cv2.imread(caminhoFoto), cv2.COLOR_BGR2GRAY)
 
-        ids.append(id)
-        faces.append(face)
+            ids.append(id)
+            faces.append(face)
     return np.array(ids), faces
 
 

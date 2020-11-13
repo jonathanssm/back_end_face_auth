@@ -7,7 +7,7 @@ largura, altura = 220, 220
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 camera = cv2.VideoCapture(0)
 
-while (True):
+while True:
     conectado, imagem = camera.read()
     imagemCinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
     facesDetectadas = detectorFace.detectMultiScale(imagemCinza,
