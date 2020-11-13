@@ -6,6 +6,7 @@ eigenface = cv2.face.EigenFaceRecognizer_create()
 fisherface = cv2.face.FisherFaceRecognizer_create()
 lbph = cv2.face.LBPHFaceRecognizer_create()
 
+
 def getFotoComId():
     caminhos = [os.path.join('fotos', f) for f in os.listdir('fotos')]
     faces = []
@@ -18,6 +19,7 @@ def getFotoComId():
         ids.append(id)
         faces.append(face)
     return np.array(ids), faces
+
 
 ids, faces = getFotoComId()
 

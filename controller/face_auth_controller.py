@@ -9,6 +9,7 @@ app = Flask(__name__)
 CORS(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
 @app.route('/')
 def hello_world():
     return "Hi"
@@ -22,4 +23,3 @@ def cadastrarUsuario():
         return "true"
     except ValueError:
         return "false"
-
