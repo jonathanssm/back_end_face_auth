@@ -12,6 +12,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 CORS(app)
 
+CAMINHO_CASCADE = '../util/haarcascade_frontalface_default.xml'
+classificador = cv2.CascadeClassifier(CAMINHO_CASCADE)
+
 
 @app.route('/cadastro/cadastrar-usuario', methods=['POST'])
 def cadastrarUsuario():
