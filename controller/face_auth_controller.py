@@ -1,21 +1,23 @@
 import os
-#import cv2
+import base64
 
-from flask import Flask, request
+from flask import Flask, request, make_response
 from flask_cors import CORS
 
 UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
 CORS(app)
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-#camera = cv2.Video
 
+@app.route('/artigo/', methods=['GET'])
+def send_pdf():
+    with open('./article/artigo.pdf', 'rb') as f:
+        blob = base64.b64encode(f.read())
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+    return blob
 
 
 @app.route('/cadastro/cadastrar-usuario', methods=['POST'])
@@ -26,14 +28,3 @@ def cadastrarUsuario():
         return "true"
     except ValueError:
         return "false"
-
-
-#def testDetectFace():
-    #help(cv2.face)
-    #while True:
-     #   conectado, imagem = camera.read()
-#
- #       cv2.imshow("Face", imagem)
-  #      cv2.waitKey(1)
-   # camera.read()
-    #cv2.destroyAllWindows()
