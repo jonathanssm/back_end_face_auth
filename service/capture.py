@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 
+from model import dimensao
+
 classificador = cv2.CascadeClassifier("../util/haarcascade_frontalface_default.xml")
 classificadorOlho = cv2.CascadeClassifier("../util/haarcascade_eye.xml")
 
@@ -8,7 +10,7 @@ camera = cv2.VideoCapture(0)
 amostra = 1
 numeroAmostras = 25
 id = input('Digite o id: ')
-largura, altura = 220, 220
+dimensaoFoto = dimensao.Dimensao(220, 220)
 
 while True:
     conectado, imagem = camera.read()
@@ -27,9 +29,9 @@ while True:
         for (ox, oy, ol, oa) in olhosDetectados:
             cv2.rectangle(regiao, (ox, oy), (ox + ol, oy + oa), (0, 0, 255), 2)
 
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(1) & 0xFF == ord('p'):
                 if np.average(imagemCinza) > 110:
-                    face = cv2.resize(imagemCinza[y:y + a, x:x + l], (altura, largura))
+                    face = cv2.resize(imagemCinza[y:y + a, x:x + l], (dimensaoFoto.altura, dimensaoFoto.largura))
                     cv2.imwrite("fotos/pessoa." + str(id) + "." + str(amostra) + ".jpg", face)
                     print("[foto " + str(amostra) + " capturada com sucesso.]")
                     amostra += 1
@@ -37,7 +39,7 @@ while True:
     cv2.imshow("Face", imagem)
     cv2.waitKey(1)
 
-    if amostra >= numeroAmostras + 1:
+    if amostra >= numeroAmostras + 1 or 0xFF == ord('b'):
         break
 
 camera.release()

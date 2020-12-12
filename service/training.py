@@ -2,20 +2,21 @@ import cv2
 import os
 import numpy as np
 
-#threshold pode ser ajustado para melhorar a qualidade do reconhecimento
-#eigenface = cv2.face.EigenFaceRecognizer_create(num_components=50)
-#fisherface = cv2.face.FisherFaceRecognizer_create()
-#lbph = cv2.face.LBPHFaceRecognizer_create()
+# threshold pode ser ajustado para melhorar a qualidade do reconhecimento
+# eigenface = cv2.face.EigenFaceRecognizer_create(num_components=50)
+# fisherface = cv2.face.FisherFaceRecognizer_create()
+# lbph = cv2.face.LBPHFaceRecognizer_create()
 
-eigenface = cv2.face.EigenFaceRecognizer_create(40, 8000)
-fisherface = cv2.face.FisherFaceRecognizer_create(3, 2000)
-lbph = cv2.face.LBPHFaceRecognizer_create(2, 2, 7, 7, 50)
+eigenface = cv2.face.EigenFaceRecognizer_create(15, 8000)
+fisherface = cv2.face.FisherFaceRecognizer_create(2, 2000)
+lbph = cv2.face.LBPHFaceRecognizer_create(2, 2, 7, 7, 18)
+
+faces = []
+ids = []
 
 
 def getFotoComId():
     caminhos = [os.path.join('fotos', f) for f in os.listdir('fotos')]
-    faces = []
-    ids = []
 
     for caminhoFoto in caminhos:
         if caminhoFoto != 'fotos\.gitignore':

@@ -1,18 +1,23 @@
 import os
+import base64
 
-from flask import Flask, request
+from flask import Flask, request, make_response
 from flask_cors import CORS
 
 UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)
 CORS(app)
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-@app.route('/')
-def hello_world():
-    return "Hi"
+@app.route('/artigo/', methods=['GET'])
+def send_pdf():
+    with open('./article/artigo.pdf', 'rb') as f:
+        blob = base64.b64encode(f.read())
+
+    return blob
 
 
 @app.route('/cadastro/cadastrar-usuario', methods=['POST'])

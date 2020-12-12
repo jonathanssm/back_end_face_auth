@@ -55,28 +55,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/service" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SpikeSL-vision-systems-1fb3fcebe6d0/Python" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Jonathan\GitHub\back_end_face_auth\service" />
-      <recent name="D:\Jonathan\GitHub\back_end_face_auth\util" />
-      <recent name="D:\Jonathan\GitHub\back_end_face_auth\controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Jonathan\GitHub\back_end_face_auth\service" />
       <recent name="D:\Jonathan\GitHub\back_end_face_auth\service\fotos" />
       <recent name="D:\Jonathan\GitHub\back_end_face_auth\util" />
       <recent name="C:\Users\Jonathan\PycharmProjects\back_end_face_auth" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Jonathan\GitHub\back_end_face_auth\artigo" />
+      <recent name="D:\Jonathan\GitHub\back_end_face_auth\service" />
+      <recent name="D:\Jonathan\GitHub\back_end_face_auth\util" />
+      <recent name="D:\Jonathan\GitHub\back_end_face_auth\controller" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.reconhecedor_eigenfaces">
-    <configuration name="capture" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="back_end_face_auth" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,56 +86,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/capture.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="reconhecedor_eigenfaces" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="back_end_face_auth" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/reconhecedor_eigenfaces.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="reconhecedor_fisherfaces" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="back_end_face_auth" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/reconhecedor_fisherfaces.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,6 +113,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/reconhecedor_lbph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="teste_yale" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="back_end_face_auth" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/teste_yale.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,6 +164,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="treinamento_yale" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="back_end_face_auth" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/treinamento_yale.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="back_end_face_auth" type="Python.FlaskServer">
       <module name="back_end_face_auth" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -203,11 +202,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.reconhecedor_eigenfaces" />
-        <item itemvalue="Python.training (1)" />
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.teste_yale" />
+        <item itemvalue="Python.treinamento_yale" />
         <item itemvalue="Python.reconhecedor_lbph" />
-        <item itemvalue="Python.reconhecedor_fisherfaces" />
-        <item itemvalue="Python.capture" />
+        <item itemvalue="Python.training (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +224,13 @@
       <workItem from="1605284143093" duration="203000" />
       <workItem from="1605285960350" duration="168000" />
       <workItem from="1605286884341" duration="17658000" />
+      <workItem from="1605383378468" duration="7742000" />
+      <workItem from="1605976594667" duration="4568000" />
+      <workItem from="1606008595217" duration="924000" />
+      <workItem from="1606009587117" duration="603000" />
+      <workItem from="1607474577611" duration="32000" />
+      <workItem from="1607474642931" duration="252000" />
+      <workItem from="1607478482768" duration="1973000" />
     </task>
     <servers />
   </component>
@@ -245,45 +251,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605284251202">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605284251202" />
-    <state x="827" y="282" key="EnvironmentVariablesDialog" timestamp="1605284176371">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="827" y="282" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605284176371" />
-    <state width="1877" height="137" key="GridCell.Tab.0.bottom" timestamp="1605311082218">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="137" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605311082218" />
-    <state width="1877" height="137" key="GridCell.Tab.0.center" timestamp="1605311082218">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="137" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605311082218" />
-    <state width="1877" height="137" key="GridCell.Tab.0.left" timestamp="1605311082218">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="137" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605311082218" />
-    <state width="1877" height="137" key="GridCell.Tab.0.right" timestamp="1605311082218">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="137" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605311082218" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1605287148829">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605287148829" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/back_end_face_auth$back_end_face_auth.coverage" NAME="back_end_face_auth Coverage Results" MODIFIED="1605289697435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$reconhecedor_lbph.coverage" NAME="reconhecedor_lbph Coverage Results" MODIFIED="1605310837072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$reconhecedor_fisherfaces.coverage" NAME="reconhecedor_fisherfaces Coverage Results" MODIFIED="1605305256470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$training__1_.coverage" NAME="training (1) Coverage Results" MODIFIED="1605311048651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$app.coverage" NAME="app Coverage Results" MODIFIED="1605289777135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$eigenface.coverage" NAME="eigenface Coverage Results" MODIFIED="1605295336822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$reconhecedor_eigenfaces.coverage" NAME="reconhecedor_eigenfaces Coverage Results" MODIFIED="1605311085137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
-    <SUITE FILE_PATH="coverage/back_end_face_auth$capture.coverage" NAME="capture Coverage Results" MODIFIED="1605304038406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/service" />
   </component>
 </project>
