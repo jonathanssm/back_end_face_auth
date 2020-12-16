@@ -1,16 +1,8 @@
 import os
-import base64
 
 from flask import Flask, request
 from flask_cors import CORS
-from PIL import Image
-from io import BytesIO
-from model import dimensao
-
-
-dimensaoFoto = dimensao.Dimensao(220, 220)
-
-listaPessoas = [{1, "Jonathan"}, {2, "Pessoa 1"}, {3, "Pedro V."}]
+from service import face_auth_servico
 
 UPLOAD_FOLDER = './uploads'
 
@@ -22,19 +14,26 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/artigo/', methods=['GET'])
 def getArtigo():
-    with open('./article/artigo.pdf', 'rb') as f:
-        blob = base64.b64encode(f.read())
-
-    return blob
+    return face_auth_servico.getArtigo()
 
 
+# Este meotod ainda nao foi finalizado
 @app.route('/cadastro/cadastrar-usuario', methods=['POST'])
 def cadastrarUsuario():
     try:
-        f = request.files['arquivo']
-        f.save(os.path.join(app.config['UPLOAD_FOLDER'], f.filename))
+        arquivo = request.files['arquivo']
+        arquivo.save(os.path.join(app.config['UPLOAD_FOLDER'], arquivo.filename))
         return "true"
     except ValueError:
         return "false"
 
 
+@app.route('/autenticacao/autenticar-usuario', methods=['POST'])
+def autenticarUsuario():
+    try:
+        imagem = request.json['imagem']
+
+        return face_auth_servico.autenticar(imagem)
+
+    except ValueError:
+        return "false"
