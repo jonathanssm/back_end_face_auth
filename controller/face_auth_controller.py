@@ -43,32 +43,3 @@ def cadastrarUsuario():
         return "false"
 
 
-@app.route('/autenticacao/autenticar-usuario', methods=['POST'])
-def autenticarUsuario():
-    try:
-        imagem = Image.open(BytesIO(base64.b64decode(request.json['imagem'])))
-        imagem.save('./uploads/image.jpeg', 'JPEG')
-
-        imagemPath = cv2.imread('./uploads/image.jpeg')
-        imagemCinza = cv2.cvtColor(imagemPath, cv2.COLOR_BGR2GRAY)
-        facesDetectadas = detectorFace.detectMultiScale(imagemCinza,
-                                                        scaleFactor=1.5,
-                                                        minSize=(30, 30))
-
-        if len(facesDetectadas) > 0:
-            for (x, y, l, a) in facesDetectadas:
-                imagemFace = cv2.resize(imagemCinza[y:y + a, x:x + l], (dimensaoFoto.largura, dimensaoFoto.altura))
-                id, confianca = reconhecedor.predict(imagemFace)
-                nome = ""
-
-                for idPessoa, nomePessoa in listaPessoas:
-                    if id == idPessoa:
-                        nome = nomePessoa
-                    elif len(nome) < 1:
-                        return "noOneFind"
-        else:
-            return "noFaces"
-
-        return nome + " você foi autenticado com sucesso."
-    except ValueError:
-        return "false"
