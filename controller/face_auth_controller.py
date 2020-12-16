@@ -5,7 +5,6 @@ import cv2
 from flask import Flask, request
 from flask_cors import CORS
 from PIL import Image
-from io import BytesIO
 
 UPLOAD_FOLDER = './uploads'
 
