@@ -1,8 +1,6 @@
 import os
 import base64
 import cv2
-import PIL
-import io
 
 from flask import Flask, request
 from flask_cors import CORS
