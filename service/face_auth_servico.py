@@ -10,7 +10,6 @@ reconhecedor = cv2.face.LBPHFaceRecognizer_create()
 reconhecedor.read("service/classificadores/classificadorLBPH.yml")
 
 dimensaoFoto = dimensao.Dimensao(220, 220)
-font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 
 listaPessoas = [{1, "Jonathan"}, {2, "Pessoa 1"}, {3, "Pedro V."}]
 
