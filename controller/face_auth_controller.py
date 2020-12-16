@@ -1,17 +1,8 @@
 import os
 import base64
-import cv2
 
-from flask import Flask, request
+from flask import Flask, request, make_response
 from flask_cors import CORS
-
-detectorFace = cv2.CascadeClassifier("./util/haarcascade_frontalface_default.xml")
-reconhecedor = cv2.face.LBPHFaceRecognizer_create()
-reconhecedor.read("./util/classificadorLBPH.yml")
-
-font = cv2.FONT_HERSHEY_COMPLEX_SMALL
-
-listaPessoas = [{1, "Jonathan"}, {2, "Pessoa 1"}, {3, "Pedro V."}]
 
 UPLOAD_FOLDER = './uploads'
 
@@ -22,7 +13,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 @app.route('/artigo/', methods=['GET'])
-def getArtigo():
+def send_pdf():
     with open('./article/artigo.pdf', 'rb') as f:
         blob = base64.b64encode(f.read())
 
@@ -37,5 +28,3 @@ def cadastrarUsuario():
         return "true"
     except ValueError:
         return "false"
-
-
