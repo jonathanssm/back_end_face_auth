@@ -4,15 +4,11 @@ import cv2
 
 from flask import Flask, request
 from flask_cors import CORS
-from PIL import Image
-from io import BytesIO
-from model import dimensao
 
 detectorFace = cv2.CascadeClassifier("./util/haarcascade_frontalface_default.xml")
 reconhecedor = cv2.face.LBPHFaceRecognizer_create()
 reconhecedor.read("./util/classificadorLBPH.yml")
 
-dimensaoFoto = dimensao.Dimensao(220, 220)
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 
 listaPessoas = [{1, "Jonathan"}, {2, "Pessoa 1"}, {3, "Pedro V."}]
