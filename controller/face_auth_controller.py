@@ -2,7 +2,7 @@ import os
 import base64
 import cv2
 
-from flask import Flask, request, make_response
+from flask import Flask, request
 from flask_cors import CORS
 from PIL import Image
 from io import BytesIO
