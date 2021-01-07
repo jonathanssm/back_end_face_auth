@@ -2,16 +2,17 @@ import cv2
 import os
 import numpy as np
 import time
+import glob
 
 from PIL import Image
 
-eigenface = cv2.face.EigenFaceRecognizer_create(15, 8000)
-fisherface = cv2.face.FisherFaceRecognizer_create(2, 2000)
-lbph = cv2.face.LBPHFaceRecognizer_create(1, 1, 7, 7, 18)
+eigenface = cv2.face.EigenFaceRecognizer_create(num_components=15, threshold=8000)
+fisherface = cv2.face.FisherFaceRecognizer_create(num_components=3, threshold=2000)
+lbph = cv2.face.LBPHFaceRecognizer_create(radius=1, neighbors=1, grid_x=7, grid_y=7, threshold=18)
 
 
 def getImagemComId():
-    caminhos = [os.path.join('yalefaces/treinamento', f) for f in os.listdir('yalefaces/treinamento')]
+    caminhos = glob.glob('yalefaces/treinamento/*.gif')
     faces = []
     ids = []
     for caminhoImagem in caminhos:
