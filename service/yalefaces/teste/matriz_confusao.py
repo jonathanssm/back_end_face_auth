@@ -37,7 +37,7 @@ def getImagemTesteComId():
                                                         scaleFactor=1.5,
                                                         minSize=(30, 30))
         for (x, y, l, a) in facesDetectadas:
-            idFaceDetectado, confianca = fisher.predict(imagemFace)
+            idFaceDetectado, confianca = lbph.predict(imagemFace)
             idAtual = int(os.path.split(caminhoImagem)[1].split(".")[0].replace("subject", ""))
 
             if idFaceDetectado == idAtual:
